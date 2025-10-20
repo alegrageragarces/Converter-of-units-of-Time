@@ -1,0 +1,35 @@
+/This is a program  that converts the number of Seconds given by the user into other units (days, hours, minutes and remaining seconds)
+
+#include <stdio.h>
+
+int main()
+{
+
+    int TotalSeconds;
+
+   // We create the variables to store the remaining value of TotalSeconds after it has been converted into other units
+
+    int days, hours, minutes, seconds;
+    
+    printf("Enter the number of seconds: ");
+
+    // Assign the number of seconds entered by the user to the variable TotalSeconds
+    scanf("%d", &TotalSeconds);
+
+    days = TotalSeconds / 86400;
+
+    // Change the value of SegundosIntroducidos to the remainder after converting seconds to days
+    TotalSeconds = TotalSeconds % 86400;
+
+    hours = TotalSeconds / 3600;
+    TotalSeconds = TotalSeconds % 3600;
+
+    minutes = TotalSeconds / 60;
+
+    // The final remainder from all the previous conversions represents the remaining number of seconds
+    seconds = TotalSeconds % 60;
+
+    printf("The number of seconds entered is equivalent to: %d days, %d hours, %d minutes, %d seconds", days, hours, minutes, seconds);
+
+    return 0;
+}
