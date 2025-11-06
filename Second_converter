@@ -1,3 +1,5 @@
+// This program converts the time of the day to calculate the amount of seconds that have passed since 00:00
+// Its great to avoid procrastination
 #include <stdio.h>
 int main()
 {
@@ -14,7 +16,7 @@ scanf("%d", &seconds);
 
 total = hours * 3600 + minutes * 60 + seconds;
 
-printf("\n %d seconds have passed since 0:0:00.", total);
+printf("\n %d seconds have passed since 00:00.", total);
 
 return 0;
 
